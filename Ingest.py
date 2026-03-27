@@ -1,10 +1,15 @@
 import sys
-import pandas as pd
 import subprocess
+import pandas as pd
+
 if len(sys.argv) < 2:
-    print("Please provide a file name (example: python Ingest.py train.csv)")
+    print("Please provide a file name (example: python ingest.py train.csv)")
     sys.exit()
+
 df = pd.read_csv(sys.argv[1])
 df.to_csv("data_raw.csv", index=False)
 print("data_raw.csv created")
-subprocess.run(["python", "preprocess.py", "data_raw.csv"])
+
+print("Starting preprocessing...")
+
+subprocess.run([sys.executable, "preprocess.py", "data_raw.csv"], check=True)
