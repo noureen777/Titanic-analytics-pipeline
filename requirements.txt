@@ -4,6 +4,9 @@ textblob
 pandas
 numpy
 scikit-learn
+seaborn
+scipy
+requests
 matplotlib
 #docker build -t myapp .
 #docker run -p 8888:8888 myapp
