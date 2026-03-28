@@ -1,0 +1,5 @@
+Survival rate by family group:
+Family_Group
+0    0.200000
+1    0.509091
+2    0.551020
